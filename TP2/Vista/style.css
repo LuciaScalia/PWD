@@ -1,0 +1,31 @@
+label.error {
+    color: #f00;
+    display: block;
+    font-size: 14px;
+}
+
+div.container {
+    width: 30%;
+}
+
+input.btn {
+    background-color: rgb(55, 181, 231);
+    color: white;
+    margin-top: 10px;
+}
+
+input.reset {
+    background-color: white;
+    color: rgb(55, 181, 231);
+    margin-top: 10px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    padding: 4px;
+}
+

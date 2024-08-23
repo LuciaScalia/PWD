@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <title>Ejercicio 8</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="titulo">
+            <h4>Calcular precio de entrada</h4>
+        </div>
+        <form action="../../TP1/Vista/Action/actionEj8.php" method="post" name="formEntrada" id="formEntrada"
+            class="needs-validation" novalidate>
+            <h5>Soy estudiante:</h5>
+            <div>
+                <input class="form-check-input" type="radio" name="esEstudiante" value="si" required> Si<br>
+                <input class="form-check-input" type="radio" name="esEstudiante" value="no" required> No<br>
+            </div>
+            <h5>Edad:</h5>
+            <div>
+                <input class="form-control" type="number" name="edad" id="edad" required>
+                <input class="form-control btn" type="submit" value="Aceptar">
+                <input class="form-control reset" type="reset" value="Limpiar">
+            </div>
+        </form>
+    </div>
+</body>
+<script src="Tp2-Ej2-8.js"></script>
+
+</html>
+
+<!--Ejercicio 8
+La empresa de Cine Cinem@s tiene establecidas diferentes tarifas para las entradas, en 
+función de la edad y de la condición de estudiante del cliente. Desea que sean los propios 
+clientes los que puedan calcular el valor de sus entradas a través de una página web. Si 
+es estudiante o menor de 12 años el precio es de $160, si es estudiante y mayor o igual 
+de 12 años el precio es de $180, en cualquier otro caso el precio es de $300. Diseñar un 
+formulario que solicite la edad y permita ingresar si se trata de un estudiante o no. Con 
+un botón enviar los datos a un script encargado de realizar el cálculo y visualizarlo. 
+Agregar un botón para limpiar el formulario y volver a consultar.-->

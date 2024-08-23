@@ -1,0 +1,89 @@
+CREATE TABLE Persona (
+tipoDoc varchar(40),
+nroDoc int,
+apellido varchar(50),
+nombre varchar(50),
+fechaNac date,
+telefono int,
+mail varchar(60),
+PRIMARY KEY (tipoDoc, nroDoc)
+);
+
+CREATE TABLE Publicidad (
+idPublicidad int,
+duracion int,
+PRIMARY KEY (idPublicidad) 
+);
+
+CREATE TABLE Cliente (
+tipoDoc varchar(40),
+nroDoc int,
+situacionFiscal varchar(100),
+PRIMARY KEY (tipoDoc, nroDoc),
+FOREIGN KEY (tipoDoc, nroDoc) REFERENCES Persona (tipoDoc, nroDoc) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Encargado (
+tipoDoc varchar(40),
+nroDoc int,
+legajo int,
+categoria int,
+PRIMARY KEY (tipoDoc, nroDoc),
+FOREIGN KEY (tipoDoc, nroDoc) REFERENCES Persona (tipoDoc, nroDoc) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Sala (
+idSala int,
+tipoDocEncargado varchar(40),
+NroDocumentoEncargado int,
+nombreSala varchar(30),
+cantAsientos int,
+tipoSala varchar(30),
+PRIMARY KEY (idSala),
+FOREIGN KEY (tipoDocEncargado, NroDocumentoEncargado) REFERENCES Encargado (tipoDoc, nroDoc) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Asiento (
+idSala int,
+nroAsiento int,
+fila varchar(1),
+PRIMARY KEY (idSala, nroAsiento),
+FOREIGN KEY (idSala) REFERENCES Sala (idSala) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Funcion (
+idFuncion int,
+fechaFuncion date,
+horaFuncion time,
+idSala int,
+idPublicidadInicio int,
+idPublicidadFinal int,
+PRIMARY KEY (idFuncion),
+FOREIGN KEY (idSala) REFERENCES Sala (idSala) ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (idPublicidadInicio) REFERENCES Publicidad (idPublicidad) ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (idPublicidadFinal) REFERENCES Publicidad (idPublicidad) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Entrada (
+nroEntrada int,
+tipoDocCliente varchar(40),
+nroDocCliente int,
+nroAsiento int,
+idSala int,
+idFuncion int,
+fechaEmision date,
+PRIMARY KEY (nroEntrada),
+FOREIGN KEY (tipoDocCliente, nroDocCliente) REFERENCES Cliente (tipoDoc, nroDoc) ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (idSala, nroAsiento) REFERENCES Asiento (idSala, nroAsiento) ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (idFuncion) REFERENCES Funcion (idFuncion) ON UPDATE CASCADE ON DELETE RESTRICT
+);
+
+CREATE TABLE Prefiere (
+tipoDocCliente varchar(40),
+nroDocCliente int,
+idPublicidad int,
+motivo varchar(100),
+PRIMARY KEY (tipoDocCliente, nroDocCliente, idPublicidad),
+FOREIGN KEY (tipoDocCliente, nroDocCliente) REFERENCES Cliente (tipoDoc, nroDoc) ON UPDATE CASCADE ON DELETE RESTRICT,
+FOREIGN KEY (idPublicidad) REFERENCES Publicidad (idPublicidad) ON UPDATE CASCADE ON DELETE RESTRICT
+);

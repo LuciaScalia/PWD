@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <title>Deporte</title>
+</head>
+
+<body>
+    <div class="container col-md-8">
+    <div class="titulo">
+        <h4>Datos personales</h4>
+    </div>
+    <form action="../../TP1/Vista/Action/actionEj6.php" method="post" name="formDatos" id="formDatos"
+        class="needs-validation" novalidate>
+        Nombre <br><input class="form-control" type="text" name="nombre" id="nombre" required><br>
+        Apellido <br><input class="form-control" type="text" name="apellido" id="apellido" required><br>
+        Edad <br><input class="form-control" type="number" name="edad" id="edad" required><br>
+        Direccion <br><input class="form-control" type="text" name="direccion" id="direccion" required><br>
+
+        <h4>Nivel de estudio</h4>
+        <input class="form-check-input" type="radio" name="estudios" id="sinEstudios" value="sin estudios" required> No tengo estudios<br>
+        <input class="form-check-input" type="radio" name="estudios" id="estudiosPrimarios" value="estudios primarios" required> Estudios
+        primarios<br>
+        <input class="form-check-input" type="radio" name="estudios" id="estudiosSecundarios" value="estudios secundarios" required> Estudios
+        secundarios<br><br>
+
+        <h4>Sexo</h4>
+        <input class="form-check-input" type="radio" name="sexo" name="femenino" id="femenino" value="femenino" required> Femenino<br>
+        <input class="form-check-input" type="radio" name="sexo" name="masculino" id="masculino" value="masculino" required> Masculino<br>
+        <input class="form-check-input" type="radio" name="sexo" name="otro" id="otro" value="otro" required> Otro<br><br>
+
+        <h4>Deportes que practica:</h4>
+        <input class="form-check-input" type="checkbox" name="deporte[]" id="futbol" value="futbol" required> Futbol<br>
+        <input class="form-check-input" type="checkbox" name="deporte[]" id="basket" value="basket" required> Basket<br>
+        <input class="form-check-input" type="checkbox" name="deporte[]" id="tenis" value="tenis" required> Tenis<br>
+        <input class="form-check-input" type="checkbox" name="deporte[]" id="voley" value="voley" required> Voley<br>
+        <input class="form-check-input" type="checkbox" name="deporte[]" id="ninguno" value="ninguno" required> Ninguno<br><br>
+
+        <input class="form-control btn" type="submit" value="Aceptar">
+    </form>
+</div>
+</body>
+<script src="Tp2-Ej2-(3,4,5,6).js"></script>
+
+</html>
