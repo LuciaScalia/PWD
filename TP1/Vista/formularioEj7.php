@@ -17,6 +17,7 @@
             </select><br><br>
             <input type="submit" value="Enviar">
         </form>
-    </div>
-</body>
-</html>
+
+<?php
+include_once "../../Vista/Estructura/Pie.php";
+?>

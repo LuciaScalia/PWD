@@ -14,7 +14,7 @@ $precioEntrada = $obj->calcularPrecio($datos);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Precio de entrada</title>
 </head>
 <body>
     <?php echo "Precio de la entrada: $$precioEntrada"; ?>

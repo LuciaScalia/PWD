@@ -13,11 +13,14 @@
             <form name="form" id="form" action="../Vista/Action/actionEj1.php" method="get">
             <label for="numero" class="form-label mt-3">N&uacute;mero</label>
             <input type="number" name="numero" id="numero" class="form-control" required>
+            <br><br>
             <div>   
                 <input type="submit" value="Aceptar" class="btn btn-info mt-2 text-white b">
             </div>
         </form>
         </div>
     </div>
-</body>
-</html>
+
+<?php
+include_once "../../Vista/Estructura/Pie.php";
+?>

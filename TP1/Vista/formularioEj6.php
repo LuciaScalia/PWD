@@ -9,8 +9,6 @@
 
 <body>
     <div>
-
-    </div>
     <form action="../Vista/Action/actionEj6.php" method="post" name="formDatos" id="formDatos">
         Nombre: <input type="text" name="nombre" id="nombre" required><br><br>
         Apellido: <input type="text" name="apellido" id="apellido" required><br><br>
@@ -30,13 +28,15 @@
         <input type="radio" name="sexo" name="otro" id="otro" value="otro" required> Otro<br><br>
 
         <h4>Seleccione los deportes que practica:</h4>
-        <input type="checkbox" name="deporte[]" id="futbol" value="futbol" required> Futbol<br>
-        <input type="checkbox" name="deporte[]" id="basket" value="basket" required> Basket<br>
-        <input type="checkbox" name="deporte[]" id="tenis" value="tenis" required> Tenis<br>
-        <input type="checkbox" name="deporte[]" id="voley" value="voley" required> Voley<br>
-        <input type="checkbox" name="deporte[]" id="ninguno" value="ninguno" required> Ninguno<br><br>
+        <input type="checkbox" name="deporte[]" id="futbol" value="futbol"> Futbol<br>
+        <input type="checkbox" name="deporte[]" id="basket" value="basket"> Basket<br>
+        <input type="checkbox" name="deporte[]" id="tenis" value="tenis"> Tenis<br>
+        <input type="checkbox" name="deporte[]" id="voley" value="voley"> Voley<br>
+        <input type="checkbox" name="deporte[]" id="ninguno" value="ninguno"> Ninguno<br><br>
 
         <input type="submit" value="Aceptar">
     </form>
-</body>
-</html>
+
+<?php
+include_once "../../Vista/Estructura/Pie.php";
+?>

@@ -27,7 +27,7 @@ $mensaje = $obj->devolverSigno($datos);
 </head>
 <body>
     <p><?php echo "El numero ingresado es $mensaje"; ?></p>
-    <a href="../../Ej2-1.html">Volver</a>
+    <a href="../../Ej2-1.php">Volver</a>
 </body>
 </html>
 

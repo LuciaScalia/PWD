@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../TP2/Vista/styleEj4.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
-    <script src="https://kit.fontawesome.com/57d2e84ec3.js" crossorigin="anonymous"></script>
-    <title>Cargar pel&iacute;cula</title>
-
-</head>
+<?php
+$tituloPagina="Cargar Pelicula";
+include_once "../../Vista/Estructura/Encabezado.php";
+echo "<link rel='stylesheet' type='text/css' href='Css/styleEj4.css'>"
+?>
 
 <body class="d-flex justify-content-center vh-100">
     <div class="container mt-2">
@@ -24,7 +11,7 @@
         </div>
         <div class="border border-top-0 rounded">
             <br>
-            <form name="formPelicula" id="formPelicula" method="post" action="Action/mostrarDatosPelicula.php" enctype="multipart/form-data"
+            <form name="formPelicula" id="formPelicula" method="post" action="Action/ej4-actionPeliculas.php"
                 class="needs-validation" novalidate>
 
                 <div class="d-flex">
@@ -71,7 +58,7 @@
                     <div class="form-group col-md-6">
                         <label for="genero" class="form-label">G&eacute;nero</label><br>
                         <select class="form-select form-control" name="genero"
-                            id="genero" required>
+                            id="genero"><!--No funciona el form-select-->
                             <option selected disabled value="">Seleccione...</option>
                             <option value="comedia">Comedia</option>
                             <option value="drama">Drama</option>
@@ -96,9 +83,10 @@
                                 value="todos los públicos" required> Todos los
                             p&uacute;blicos &nbsp;&nbsp;
                             <input type="radio" name="restriccionEdad" id="mayorSiete" class="form-check-input"
-                               value="mayores de 7 años" required> Mayores de 7
+                                value="mayores de 7 años" required> Mayores de 7
                             a&ntilde;os &nbsp;&nbsp;
-                            <input type="radio" name="restriccionEdad" id="mayorEdad" class="form-check-input" value="mayores de 18 años" required>
+                            <input type="radio" name="restriccionEdad" id="mayorEdad" class="form-check-input"
+                                value="mayores de 18 años" required>
                             Mayores de 18
                             a&ntilde;os
                         </div>
@@ -108,10 +96,6 @@
                 <div class="form-group  mt-2">
                     <label for="sinopsis" class="form-label">Sin&oacute;psis</label><br>
                     <textarea name="sinopsis" id="sinopsis" class="form-control" required></textarea>
-                </div>
-                <div class="form-group col-md-6 mt-2”">
-                    <label for="archivo" class="form-label">Poster</label><br>
-                    <input type="file" name="archivo" id="archivo" class="form-control" required>
                 </div>
                 <div class="col-md-12 mt-4 mb-4 d-flex justify-content-end">
                     <div class="mr-1">
@@ -124,8 +108,6 @@
             </form>
         </div>
     </div>
-    <script src="Js/ej4-validarPelicula.js"></script>
-
+    <script src="../../TP3/Vista/Js/ej4-validarPelicula.js"></script>
 </body>
-
 </html>
