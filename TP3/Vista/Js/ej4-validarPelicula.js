@@ -78,7 +78,7 @@ $("#formPelicula").validate({
             required: "Dato requerido"
         },
         sinopsis: {
-            required: "Dato requerido"
+            required: "Requerido"
         },
         archivo: {
             required: "Requerido",

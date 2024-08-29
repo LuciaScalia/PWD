@@ -53,7 +53,8 @@ $archivoDir = $obj->getDir() . $datos['archivo']['name'];
                                         <b>Restricción de edad: </b> {$datos['restriccionEdad']}<br>
                                         <b>Sinópsis: </b> {$datos['sinopsis']}
                                     </div>
-                                    <br><div class="d-flex justify-content-center">
+                                    <br>
+                                    <div class="d-flex justify-content-center">
                                         <h3>Poster</h3>
                                     </div>
                                     <div>

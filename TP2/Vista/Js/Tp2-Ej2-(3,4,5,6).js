@@ -9,7 +9,8 @@ $("#formDatos").validate({
         edad: {
             required: true,
             min: 0,
-            max: 120
+            max: 120,
+            number: true
         },
         direccion: {
             required: true,
@@ -35,7 +36,8 @@ $("#formDatos").validate({
         edad: {
             required: "Dato requerido",
             min: "Ingrese una edad entre 0 y 120",
-            max: "Ingrese una edad entre 0 y 120"
+            max: "Ingrese una edad entre 0 y 120",
+            number: "Debe ingresar un valor numérico"
         },
         direccion: {
             required: "Dato requerido",
@@ -55,4 +57,4 @@ $("#formDatos").validate({
 
 $.validator.addMethod("debeContener", function (valor) {
     return /(?=.*\d)/.test(valor);
-}, "La contraseña debe contener letras y números")
+}, )
