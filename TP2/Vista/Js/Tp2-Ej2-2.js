@@ -18,8 +18,6 @@ $("#formHorarios").validate({
         miercoles: reglas,
         jueves: reglas,
         viernes: reglas,
-        sabado: reglas,
-        domingo: reglas
     },
     messages: {
         lunes: mensajes,
@@ -27,7 +25,5 @@ $("#formHorarios").validate({
         miercoles: mensajes,
         jueves: mensajes,
         viernes: mensajes,
-        sabado: mensajes,
-        domingo: mensajes
     }
 });

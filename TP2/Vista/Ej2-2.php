@@ -16,8 +16,6 @@ echo "<link rel='stylesheet' type='text/css' href='Css/styleEj2.css'>"
         Miercoles<br><input class="form-control" type="number" name="miercoles" id="miercoles" required><br>
         Jueves<br><input class="form-control" type="number" name="jueves" id="jueves" required><br>
         Viernes<br><input class="form-control" type="number" name="viernes" id="viernes" required><br>
-        S&aacute;bado<br><input class="form-control" type="number" name="sabado" id="sabado" required><br>
-        Domingo<br><input class="form-control" type="number" name="domingo" id="domingo" required><br>
         <div class="submit">
             <input class="form-control btn" type="submit" value="Aceptar">
         </div>

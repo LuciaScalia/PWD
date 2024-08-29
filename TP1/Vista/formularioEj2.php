@@ -16,8 +16,6 @@
             miercoles<input type="number" name="miercoles" id="miercoles" required><br><br>
             jueves<input type="number" name="jueves" id="jueves" required><br><br>
             viernes<input type="number" name="viernes" id="viernes" required><br><br>
-            sabado<input type="number" name="sabado" id="sabado" required><br><br>
-            domingo<input type="number" name="domingo" id="domingo" required><br><br>
             <input type="submit" value="Aceptar">
         </form>
     </div>

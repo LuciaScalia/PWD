@@ -14,4 +14,3 @@
         <script src="https://kit.fontawesome.com/57d2e84ec3.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <div class="Contenido">
