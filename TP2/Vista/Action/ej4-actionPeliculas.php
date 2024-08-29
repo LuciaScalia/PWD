@@ -47,7 +47,8 @@ $datos = darDatosSubmitted();
                                 <b>Nacionalidad: </b> {$datos['nacionalidad']}<br>
                                 <b>Género: </b> {$datos['genero']}<br>
                                 <b>Duración: </b> {$datos['duracion']}<br>
-                                <b>Restricción de edad: </b> {$datos['restriccionEdad']}
+                                <b>Restricción de edad: </b> {$datos['restriccionEdad']}<br>
+                                <b>Sinópsis: </b> {$datos['sinopsis']}
                             </div>
                         </div>
                         HTML;

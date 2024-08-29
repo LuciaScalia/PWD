@@ -81,7 +81,7 @@ $("#formPelicula").validate({
             required: "Dato requerido"
         },
         archivo: {
-            required: "Dato requerido",
+            required: "Requerido",
             extension: "El archivo debe ser de tipo jpg"
         }
     }

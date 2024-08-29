@@ -50,13 +50,16 @@ $archivoDir = $obj->getDir() . $datos['archivo']['name'];
                                         <b>Nacionalidad: </b> {$datos['nacionalidad']}<br>
                                         <b>Género: </b> {$datos['genero']}<br>
                                         <b>Duración: </b> {$datos['duracion']}<br>
-                                        <b>Restricción de edad: </b> {$datos['restriccionEdad']}
+                                        <b>Restricción de edad: </b> {$datos['restriccionEdad']}<br>
+                                        <b>Sinópsis: </b> {$datos['sinopsis']}
                                     </div>
                                     <br><div class="d-flex justify-content-center">
                                         <h3>Poster</h3>
                                     </div>
                                     <div>
-                                        <img src='$archivoDir'>
+                                        <div class="d-flex justify-content-center">
+                                            <img src='$archivoDir'>
+                                        </div>
                                     </div>
                                 </div>
                                 HTML;
