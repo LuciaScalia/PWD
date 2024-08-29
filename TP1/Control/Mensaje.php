@@ -1,8 +1,5 @@
 <?php 
 
-//“Hola, yo soy 
-//nombre , apellido tengo edad años y vivo en dirección”
-
 class Mensaje {
     public function escribirMensaje($info) {
         $mensaje = "Faltan datos";
